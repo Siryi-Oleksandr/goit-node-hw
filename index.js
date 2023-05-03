@@ -1,4 +1,5 @@
 const fs = require("fs").promises;
+const argv = require("yargs").argv;
 const contacts = require("./db");
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
@@ -42,7 +43,9 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
 //   email: "dowson@rose.com",
 //   phone: "(294) 987-654123",
 // });
-invokeAction({
-  action: "deleteById",
-  id: "gc0nWBPq1OovUJxlw3TX0",
-});
+// invokeAction({
+//   action: "deleteById",
+//   id: "gc0nWBPq1OovUJxlw3TX0",
+// });
+console.log(argv);
+invokeAction(argv);
